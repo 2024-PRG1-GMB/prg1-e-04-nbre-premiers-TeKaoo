@@ -1,0 +1,40 @@
+"C:\Program Files\JetBrains\CLion 2024.2.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2024.2.1/bin/ninja/win/x64/ninja.exe" "-DCMAKE_CXX_FLAGS=-Wall -Wextra -Wconversion -Wsign-conversion -pedantic“" -G Ninja -S C:\Users\theok\Documents\HEIG\Annee1\INFO\PROG1_GMB\Labo\prg1-e-04-nbre-premiers-TeKaoo -B C:\Users\theok\Documents\HEIG\Annee1\INFO\PROG1_GMB\Labo\prg1-e-04-nbre-premiers-TeKaoo\cmake-build-debug
+-- The C compiler identification is GNU 13.1.0
+-- The CXX compiler identification is GNU 13.1.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files/JetBrains/CLion 2024.2.1/bin/mingw/bin/gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - failed
+-- Check for working CXX compiler: C:/Program Files/JetBrains/CLion 2024.2.1/bin/mingw/bin/g++.exe
+-- Check for working CXX compiler: C:/Program Files/JetBrains/CLion 2024.2.1/bin/mingw/bin/g++.exe - broken
+CMake Error at C:/Program Files/JetBrains/CLion 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:73 (message):
+  The C++ compiler
+
+    "C:/Program Files/JetBrains/CLion 2024.2.1/bin/mingw/bin/g++.exe"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: 'C:/Users/theok/Documents/HEIG/Annee1/INFO/PROG1_GMB/Labo/prg1-e-04-nbre-premiers-TeKaoo/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-r182ah'
+    
+    Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.2.1/bin/ninja/win/x64/ninja.exe" -v cmTC_9a6f4
+    [1/2] C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE   -Wall -Wextra -Wconversion -Wsign-conversion -pedanticÔÇ£  -fdiagnostics-color=always -o CMakeFiles/cmTC_9a6f4.dir/testCXXCompiler.cxx.obj -c C:/Users/theok/Documents/HEIG/Annee1/INFO/PROG1_GMB/Labo/prg1-e-04-nbre-premiers-TeKaoo/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-r182ah/testCXXCompiler.cxx
+    FAILED: CMakeFiles/cmTC_9a6f4.dir/testCXXCompiler.cxx.obj 
+    C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE   -Wall -Wextra -Wconversion -Wsign-conversion -pedanticÔÇ£  -fdiagnostics-color=always -o CMakeFiles/cmTC_9a6f4.dir/testCXXCompiler.cxx.obj -c C:/Users/theok/Documents/HEIG/Annee1/INFO/PROG1_GMB/Labo/prg1-e-04-nbre-premiers-TeKaoo/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-r182ah/testCXXCompiler.cxx
+    G__~1.EXE: error: unrecognized command-line option '-pedanticÔÇ£'; did you mean '-pedantic'?
+    ninja: build stopped: subcommand failed.
+    
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+
+-- Configuring incomplete, errors occurred!
