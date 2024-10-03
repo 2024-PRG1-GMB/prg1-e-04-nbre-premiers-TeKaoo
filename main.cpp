@@ -1,3 +1,10 @@
+/**
+ * \file main.cpp
+ * \version 1.0.0
+ * \author Théo Kilcher
+ * \date : 02.10.2024
+ * \brief : Lister les nombres premiers de 1 au nombre entre 1 et 1000 proposé par l'utilisateur.
+ */
 #include <iostream>
 #include <iomanip>
 #include <cstdlib>
