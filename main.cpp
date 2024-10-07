@@ -5,6 +5,7 @@
  * \date : 02.10.2024
  * \brief : Lister les nombres premiers de 1 au nombre entre 1 et 1000 proposé par l'utilisateur.
  */
+
 #include <iostream>
 #include <iomanip>
 using namespace std;
@@ -72,10 +73,9 @@ int main()
         {
             cout << "Voulez-vous recommencer [O/N] : ";
             cin >> sortie;
-            sortie = toupper(sortie);
-        } while (sortie != 'O' && sortie != 'N');
+        } while (toupper(sortie) != 'O' && toupper(sortie) != 'N');
 
-    } while (sortie != 'N'); // Sort du programme
+    } while (toupper(sortie) != 'N'); // Sort du programme
 
     cout << endl << "Fin de programme" << endl;
 }
