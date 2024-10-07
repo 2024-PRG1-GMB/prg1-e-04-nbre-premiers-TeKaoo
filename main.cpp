@@ -16,6 +16,9 @@ int main()
     char sortie;
     int nb_max, compteur, nombre;
     int tableur = 0; // va permettre d'amener à la ligne après avoir écrit 5 nombres.
+    constexpr int min_valeur = 2;
+    constexpr int max_valeur = 1000;
+
 
 
     cout << "Ce programme ..." << endl << endl;
@@ -29,7 +32,7 @@ int main()
         {
             cout << "Entrer une valeur [2-1000] : ";
             cin >> nb_max;
-        } while (nb_max < 2 || nb_max > 1000);
+        } while (nb_max < min_valeur || nb_max > max_valeur);
 
         cout << "Voici la liste des nombres premiers" << endl;
 
@@ -69,6 +72,7 @@ int main()
         {
             cout << "Voulez-vous recommencer [O/N] : ";
             cin >> sortie;
+            sortie = toupper(sortie);
         } while (sortie != 'O' && sortie != 'N');
 
     } while (sortie != 'N'); // Sort du programme
