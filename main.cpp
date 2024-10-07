@@ -7,59 +7,73 @@
  */
 #include <iostream>
 #include <iomanip>
-#include <cstdlib>
-#include <cmath>
 using namespace std;
+
+
 
 int main()
 {
-    cout << "Ce programme ... " << endl << endl << endl;
+    char sortie;
+    int nb_max, compteur;
+    int nombre = 0;
+    int tableur = 0; // va permettre d'amener à la ligne après avoir écrit 5 nombres.
 
-    int nb;
+
+    cout << "Ce programme ..." << endl << endl;
+
+    // Faire tourner le programme jusqu'à ce que l'on demande l'arret.
     do
     {
-        cout << "Entrer un nombre [2 - 1000] :  " ;
-        cin >> nb;
-    } while (nb < 2 || nb > 1000);
-
-    //int nb_testant = nb;
-    //int result [nb];
-    //for (int j = nb; j > 0;) // vient faire tourner la boucle pour J vaut nb rentré jusqu'à ce que nb vale 0
-    //{
-    //    int i = 2;
-    //    do
-    //    {
-    //        //for (; i <= sqrt(j); i++)
-    //        //{
-    //        //}
-    //        j--;
-    //        // result[j] = {j};
-    //    } while (j % i++ == 0);
-    //    cout << j << " : "  << j << " % " << i << " = " << j % i << endl;
-    //}
-
-    //for (int ligne = 'a'; ligne < 'e'; ligne++)
-    //{
-    //    for (int col = nb; (col / 5) > 1; col--)
-    //    {
-    //        int x = nb;
-    //        cout << result[x] << ' ';
-    //        --x;
-    //    }
-    //    cout << endl;
-    //}
-
-    int result[15] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47};
-    for (int i = 0; i < nb;)
-    {
-        cout << "       ";
-        for (int j = 0; j < 5; i++, j++)
+        // Boucle do / while pour demander à l'utilisateur d'entrer un nombre et vérifier s'il rentre dans les valeurs voulues.
+        do
         {
-            cout << result [i] << "     ";
-        }
-        cout << endl;
+            cout << "Entrer une valeur [2-1000] : ";
+            cin >> nb_max;
+        } while (nb_max < 2 || nb_max > 1000);
 
-    }
+        cout << "Voici la liste des nombres premiers" << endl;
+
+        // Boucle de vérification et affichage des nombres.
+        while (nombre < nb_max)
+        {
+            compteur = 0;
+            nombre++;
+
+            // Vérifier si le nombre est premier
+            for(int i = 1; i <= nb_max; i++)
+            {
+                if(nombre % i == 0)
+                {
+                    compteur++; // lorsqu'un nombre va avoir un modulo de 0 uniquement 2x (car diviser par 1 et lui même)
+                                // le compteur incrémente de 1 et signifie que le nombre sera premier.
+                }
+            }
+            // Afficher le nombre s'il est premier.
+            if (compteur == 2)
+            {
+                tableur++;
+                cout << '\t' << nombre << '\t';
+                // Une fois que le programme à écrit 5 nombres il remets à la ligne.
+                if (tableur == 5)
+                {
+                    cout << endl;
+                    tableur = 0;
+                }
+            }
+
+        }
+        cout << endl << endl;
+
+        // Demande à l'utilisateur s'il veut recommencer en vérifiant si la réponse données pour qu'elle rentre dans les valeurs voulues.
+        do
+        {
+            cout << "Voulez-vous recommencer [O/N] : ";
+            cin >> sortie;
+        } while (sortie != 'O' && sortie != 'N');
+
+    } while (sortie != 'N'); // Sort du programme
+
+    cout << endl << "Fin de programme" << endl;
 }
 
 
