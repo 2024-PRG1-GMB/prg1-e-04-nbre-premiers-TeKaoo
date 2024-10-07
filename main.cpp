@@ -14,8 +14,7 @@ using namespace std;
 int main()
 {
     char sortie;
-    int nb_max, compteur;
-    int nombre = 0;
+    int nb_max, compteur, nombre;
     int tableur = 0; // va permettre d'amener à la ligne après avoir écrit 5 nombres.
 
 
@@ -24,6 +23,7 @@ int main()
     // Faire tourner le programme jusqu'à ce que l'on demande l'arret.
     do
     {
+        nombre = 0;
         // Boucle do / while pour demander à l'utilisateur d'entrer un nombre et vérifier s'il rentre dans les valeurs voulues.
         do
         {
@@ -40,7 +40,7 @@ int main()
             nombre++;
 
             // Vérifier si le nombre est premier
-            for(int i = 1; i <= nb_max; i++)
+            for(int i = 1; i <= nombre; i++)
             {
                 if(nombre % i == 0)
                 {
