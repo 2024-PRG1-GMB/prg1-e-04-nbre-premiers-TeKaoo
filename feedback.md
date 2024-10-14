@@ -1,0 +1,2 @@
+- Absence de la lib cstdlib
+- Pas de constantes pour les entrées utilisateur ('O' et 'N')
